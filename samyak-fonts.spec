@@ -4,11 +4,11 @@
 # Common description
 %global common_desc \
 The Samyak package contains fonts for the display of \
-Scripts Devanagari, Gujarati, Malayalam, Oriya and Tamil
+Scripts Devanagari, Gujarati, Malayalam, Odia and Tamil
 
 Name:	 %{fontname}-fonts
 Version:	1.2.2
-Release:	10%{?dist}
+Release:	12%{?dist}
 Summary:	Free Indian truetype/opentype fonts
 Group:	User Interface/X
 License:	GPLv3+ with exceptions
@@ -79,13 +79,13 @@ Scripts Gujarati.
 %_font_pkg -n gujarati -f %{fontconf}-gujarati.conf Samyak-Gujarati.ttf 
 
 %package -n %{fontname}-oriya-fonts
-Summary: Open Type Fonts for Oriya script
+Summary: Open Type Fonts for Odia script
 Group: User Interface/X 
 Requires: %{name}-common = %{version}-%{release}
 License: GPLv3+ with exceptions
 %description -n %{fontname}-oriya-fonts
 This package contains truetype/opentype font for the display of \
-Scripts Oriya.
+Scripts Odia.
 
 %_font_pkg -n oriya -f %{fontconf}-oriya.conf Samyak-Oriya.ttf 
 
@@ -137,6 +137,12 @@ done
 %dir %{_fontdir}
 
 %changelog
+* Mon Jan 13 2014 Pravin Satpute <psatpute@redhat.com> - 1.2.2-12
+- Resolves: rhbz#1040773 :- Replaced Oriya with Odia
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1.2.2-11
+- Mass rebuild 2013-12-27
+
 * Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.2.2-10
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
